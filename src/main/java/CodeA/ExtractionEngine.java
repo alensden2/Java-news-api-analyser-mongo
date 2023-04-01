@@ -17,13 +17,12 @@ public class ExtractionEngine {
      * the hashmap after the async call completes has all the headlines in the form
      * ( keyword -> NEWS )
      * */
-    public void getExtractionEngine() {
+    public Map<String,String> getExtractionEngine() {
         for (String s : keywords){
             apiResponse.setApiUrl(s);
             String response = apiResponse.getHeadlinesForKeyWord(s);
             apiResponseFromCall.put(s,response);
         }
+        return apiResponseFromCall;
     }
-
-
 }

@@ -1,12 +1,13 @@
 package org.example;
 
+import CodeA.CodeA;
 import CodeA.ExtractionEngine;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         // initiate code A
-        ExtractionEngine extractionEngine = new ExtractionEngine();
-        extractionEngine.getExtractionEngine();
+        CodeA codeA = new CodeA();
+        codeA.codeA();
     }
 }
