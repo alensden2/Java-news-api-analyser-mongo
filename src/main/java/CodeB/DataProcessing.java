@@ -31,7 +31,7 @@ public class DataProcessing {
      * To find the total articles in a file
      * This tells if the news for the keyword is having no articles
      * */
-    Pattern totalArticlesPattern = Pattern.compile("\"totalResults\":(\\d+)");
+    Pattern totalArticlesPattern = Pattern.compile(Constants.TOTAL_ARTICLE_REGEX);
     Matcher totalArticlesMatcher = totalArticlesPattern.matcher(api_response);
     if (totalArticlesMatcher.find()) {
       totalArticles = Integer.parseInt(totalArticlesMatcher.group(1));
@@ -59,7 +59,7 @@ public class DataProcessing {
      * this string is saved, it stops when it finds 5 or fewer headlines for a keyword
      * */
     int counter = 0;
-    while (titleMatcher.find() && contentMatcher.find() && counter < 5) {
+    while (titleMatcher.find() && contentMatcher.find() && counter < Constants.FINAL_ARTICLE_PER_FILE) {
       String content = contentMatcher.group(1);
       String title = titleMatcher.group(1);
       if (content != null || !content.isEmpty()) {

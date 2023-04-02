@@ -1,10 +1,14 @@
 package CodeA;
 
-import APIAssets.Constants;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Properties;
+
+import APIAssets.Constants;
 
 public class ApiResponse {
   String url1 = Constants.API_URL_1;

@@ -1,8 +1,9 @@
 package CodeA;
 
-import CodeB.CodeB;
 import java.util.HashMap;
 import java.util.Map;
+
+import CodeB.CodeB;
 
 public class CodeA {
 

@@ -11,6 +11,8 @@ public class Constants {
     public static final String CONTENT_REGEX_PATTERN = "\"content\":\"([^\"]+)\"";
     public static final String TOTAL_ARTICLE_REGEX = "\"totalResults\":(\\d+)";
     public static final int FINAL_ARTICLE_PER_FILE = 5;
+    public static final String ALL_FILE_DIRECTORY = "src/main/java/ArticlesFiles";
+    public static final String CLEAN_STRING_REGEX = "[^A-Za-z0-9: ]+";
     /**
      * FORMAT TO USE API STRING -
      * API_CALLED = API_URL_1+NEWS-HEADLINE+API_URL_2+API-KEY
