@@ -15,6 +15,17 @@ import java.util.Properties;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+/**
+ * This is a Java Application that fetches data from a news api (https://newsapi.org/docs/endpoints/top-headlines)
+ * And then processes the data by restricting the articles to five per keyword. It then processes it to remove any special
+ * Characters and emoticons and stores it in a NOSQL MongoDB Database.
+ *
+ * @author Alen John
+ * @version 1.0
+ * @since Apr 02, 2023
+ *
+ * @see Java Docs reference - "https://www.tutorialspoint.com/java/java_documentation.htm"
+ */
 public class MongoAccess {
   String username = "";
   String password = "";
@@ -45,6 +56,13 @@ public class MongoAccess {
     password = props.getProperty("password");
   }
 
+  /**
+   * Takes the titles and the contents array lists
+   * and stores it in the monogo DB
+   *
+   * @param titles the titles array
+   * @param contents the contents array
+   */
   public void insertToDatabase(List<String> titles, List<String> contents) {
     String connectionURI =
       "mongodb+srv://" +
