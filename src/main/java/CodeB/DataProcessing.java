@@ -6,6 +6,17 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This is a Java Application that fetches data from a news api (https://newsapi.org/docs/endpoints/top-headlines)
+ * And then processes the data by restricting the articles to five per keyword. It then processes it to remove any special
+ * Characters and emoticons and stores it in a NOSQL MongoDB Database.
+ *
+ * @author Alen John
+ * @version 1.0
+ * @since Apr 02, 2023
+ *
+ * @see Java Docs reference - "https://www.tutorialspoint.com/java/java_documentation.htm"
+ */
 public class DataProcessing {
   WriteToFile writeToFile = new WriteToFile();
   String contentToBeWritten = "";
@@ -14,7 +25,8 @@ public class DataProcessing {
 
   /**
    * Iterates over the keywords and the respective headlines
-   * */
+   * @param apiData The api Data
+   */
   public void findFiveArticlesForKeywords(Map<String, String> apiData) {
     for (String s : keywords) {
       getNewsToFile(apiData.get(s), s);
@@ -24,14 +36,18 @@ public class DataProcessing {
   /**
    * This takes the headlines in the keyword and iterated over till it gets five headlines (or less in the case if less headlines)
    * Once this is done it saves the five headlines to the file
-   * */
+   * @param api_response The api response
+   * @param key The key is the keyword to matched
+   */
   public void getNewsToFile(String api_response, String key) {
     int totalArticles = 0;
     /**
      * To find the total articles in a file
      * This tells if the news for the keyword is having no articles
      * */
-    Pattern totalArticlesPattern = Pattern.compile(Constants.TOTAL_ARTICLE_REGEX);
+    Pattern totalArticlesPattern = Pattern.compile(
+      Constants.TOTAL_ARTICLE_REGEX
+    );
     Matcher totalArticlesMatcher = totalArticlesPattern.matcher(api_response);
     if (totalArticlesMatcher.find()) {
       totalArticles = Integer.parseInt(totalArticlesMatcher.group(1));
@@ -59,7 +75,11 @@ public class DataProcessing {
      * this string is saved, it stops when it finds 5 or fewer headlines for a keyword
      * */
     int counter = 0;
-    while (titleMatcher.find() && contentMatcher.find() && counter < Constants.FINAL_ARTICLE_PER_FILE) {
+    while (
+      titleMatcher.find() &&
+      contentMatcher.find() &&
+      counter < Constants.FINAL_ARTICLE_PER_FILE
+    ) {
       String content = contentMatcher.group(1);
       String title = titleMatcher.group(1);
       if (content != null || !content.isEmpty()) {

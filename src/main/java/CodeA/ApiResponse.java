@@ -1,5 +1,6 @@
 package CodeA;
 
+import APIAssets.Constants;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,7 +9,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Properties;
 
-import APIAssets.Constants;
+/**
+ * This is a Java Application that fetches data from a news api (https://newsapi.org/docs/endpoints/top-headlines)
+ * And then processes the data by restricting the articles to five per keyword. It then processes it to remove any special
+ * Characters and emoticons and stores it in a NOSQL MongoDB Database.
+ *
+ * @author Alen John
+ * @version 1.0
+ * @since Apr 02, 2023
+ *
+ * @see Java Docs reference - "https://www.tutorialspoint.com/java/java_documentation.htm"
+ */
 
 public class ApiResponse {
   String url1 = Constants.API_URL_1;
@@ -20,6 +31,7 @@ public class ApiResponse {
    * Sets the url for the api
    * using the keywords and the api keys
    * sets the method and then sets URL
+   * @param keyword the keyword to set the url
    */
   public void setApiUrl(String keyword) {
     Properties props = new Properties();
@@ -40,6 +52,8 @@ public class ApiResponse {
   /**
    * Gets the response of the entire api call in a string and
    * returns that string
+   * @param keyword the keyword to fetch the resulting response
+   * @return the response
    */
   public String getHeadlinesForKeyWord(String keyword) {
     String response = "";

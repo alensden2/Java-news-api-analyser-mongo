@@ -1,12 +1,22 @@
 package CodeC;
 
+import APIAssets.Constants;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import APIAssets.Constants;
-
+/**
+ * This is a Java Application that fetches data from a news api (https://newsapi.org/docs/endpoints/top-headlines)
+ * And then processes the data by restricting the articles to five per keyword. It then processes it to remove any special
+ * Characters and emoticons and stores it in a NOSQL MongoDB Database.
+ *
+ * @author Alen John
+ * @version 1.0
+ * @since Apr 02, 2023
+ *
+ * @see Java Docs reference - "https://www.tutorialspoint.com/java/java_documentation.htm"
+ */
 public class Transformation {
   List<String> titles = new ArrayList<>();
   List<String> contents = new ArrayList<>();
