@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": "next-big-future",
+                "name": "Next Big Future"
+            },
+            "author": "Brian Wang",
+            "title": "Improving the Performance of Electrodeless Plasma Thrusters for Space Propulsion | NextBigFuture.com",
+            "description": "A Tohoku University researcher has increased the performance of a high-power electrodeless plasma thruster, moving us one step closer to deeper explorations",
+            "url": "https://www.nextbigfuture.com/2023/03/improving-the-performance-of-electrodeless-plasma-thrusters-for-space-propulsion.html",
+            "urlToImage": "https://nextbigfuture.s3.amazonaws.com/uploads/2023/03/plasmathruster.jpeg",
+            "publishedAt": "2023-03-31T06:38:56Z",
+            "content": "A Tohoku University researcher has increased the performance of a high-power electrodeless plasma thruster, moving us one step closer to deeper explorations into space.\r\ny, several space missions hav… [+2539 chars]"
+        },
+        {
+            "source": {
+                "id": "fortune",
+                "name": "Fortune"
+            },
+            "author": "Eamon Barrett",
+            "title": "A new report shows how badly the Trump administration slashed the U.S.’s climate credentials",
+            "description": "The ranking from Yale University says decisions made by the Trump administration slashed the country's climate credentials",
+            "url": "https://fortune.com/2022/06/01/trump-us-climate-action-paris-accord-methane-yale-environmental-performance-index/",
+            "urlToImage": "https://content.fortune.com/wp-content/uploads/2022/06/GettyImages-1342340441-e1654072113634.jpg?resize=1200,600",
+            "publishedAt": "2022-06-01T10:31:29Z",
+            "content": "Skip to Content"
+        },
+        {
+            "source": {
+                "id": "national-geographic",
+                "name": "National Geographic"
+            },
+            "author": "Steve Nadis",
+            "title": "A new sensation: recording and reproducing taste",
+            "description": "Meiji University scientist has found a way to reproduce taste, just as we’ve long been able to do for sight and sound.",
+            "url": "https://www.nationalgeographic.com/science/2021/02/partner-content-recording-and-reproducing-taste.html",
+            "urlToImage": "https://www.nationalgeographic.com/content/dam/travel/commercial/2021/NGPAsia/Meiji/Article3/invoking-taste.jpg",
+            "publishedAt": "2021-02-17T14:37:20.746352Z",
+            "content": null
+        }
+    ]
+}
