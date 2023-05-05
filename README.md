@@ -1,4 +1,4 @@
-# DMW Assignment 2
+# News headline scanner using java and MongoDb
 This program access a news api and using key words captures data, This data is then stored in the local machine and transformed. The cleaned data is then stored in a remote NOSQL database
 ## Table of Contents
 
@@ -16,7 +16,5 @@ This program access a news api and using key words captures data, This data is t
 4. Line 80, Line 82 of "src/main/java/CodeC/MongoAccess.java" can be replaced with your mongoDB and collection name.
 5. You are all set to run the program.
 ## Author
-
-Alen John B00930528
-
+Alen John
 
